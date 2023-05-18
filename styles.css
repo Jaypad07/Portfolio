@@ -352,7 +352,9 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    background-color: black;
+    background-color: #0b0c10;
+    margin-top: 10%;
+    height: 400px;
 }
 
 #contact {

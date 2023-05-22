@@ -133,6 +133,7 @@ h3{
     margin-top: 7%;
     margin-bottom: 7%;
     margin-left: 20%;
+    border-radius: 15px;
 }
 
 h1 {
@@ -166,7 +167,7 @@ h1 {
 #hs-img {
     max-width: 85%;
     max-height: 65%;
-    border: 2px groove #66fcf1;
+    border-radius: 15px;
   }
   
 
@@ -290,6 +291,12 @@ h1 {
     color: #f0f0f0;
 }
 
+/* #pro-skills {
+    margin-left: 0;
+    margin-top: 8%;
+    color: #f0f0f0;
+} */
+
 
 .pro-imgs {
     max-width: 100%; /* make sure the image doesn't exceed its container */
@@ -399,7 +406,7 @@ button {
 }
 
 a:link {
-    color: black;
+    color: white;
     padding-left: 5px;
     padding-right: 5px;
     font-size: 15px;

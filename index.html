@@ -18,16 +18,15 @@
 <body>
     <header id="header">
         <div id="header-names">
-        <h3>Jaime Padilla</h3>
-        <h4>Full Stack Software Engineer</h4>
+        <h3>Jaime Padilla &nbsp;&nbsp;|&nbsp;&nbsp; Full Stack Software Engineer</h3>
         </div>
         
         <div id="header-links-container">
             <ul id="header-right">
-                <li class="links"><a href="https://github.com/Jaypad07">GitHub</a></li>
-                <li class="links"><a href="https://www.linkedin.com/in/jaypad07/">Linkedin</a></li>
-                <li class="links"><a href="#">Resume</a></li>
-                <li class="links"><a href="#">Contact</a></li>
+                <li class="links"><a href="https://github.com/Jaypad07">ABOUT</a></li>
+                <li class="links"><a href="https://www.linkedin.com/in/jaypad07/">SKILLS</a></li>
+                <li class="links"><a href="#">PROJECTS</a></li>
+                <li class="links"><a href="#">CONTACT</a></li>
             </ul>
         </div>
     </header>
@@ -115,19 +114,22 @@
         </div>
     </div>
     <footer id="footer">
-        <h1 id="contact">CONTACT ME</h1>
-        <!-- <form action="submit-form.php" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-          
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-          
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-          
-            <button type="submit">Submit</button>
-          </form> -->
+        <h2 id="contact">CONTACT ME</h2>
+        <form class="form" action="contactform.php" method="post">
+            <input type="text" name="name" placeholder="Full name">
+            <input type="text" name="email" placeholder="Email">
+            <input type="text" name="subject" placeholder="Subject">
+            <textarea name="message" placeholder="Message"></textarea>
+            <button type="submit" name="submit">Send</button>
+        </form>
+
+        <div id="header-links-container">
+            <ul id="header-right">
+                <li class="links"><a href="https://github.com/Jaypad07">GitHub</a></li>
+                <li class="links"><a href="https://www.linkedin.com/in/jaypad07/">Linkedin</a></li>
+                <li class="links"><a href="#">Resume</a></li>
+            </ul>
+        </div>
           
     </footer>
 </body>

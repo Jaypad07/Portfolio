@@ -351,7 +351,7 @@ h1 {
     grid-template-columns: 1fr;
     background-color: #0b0c10;
     margin-top: 10%;
-    height: 400px;
+    height: 440px;
 }
 
 #contact {
@@ -390,14 +390,12 @@ textarea {
 }
 
 button {
+    display: flex;
     font-family: 'Poppins', 'Merriweather', serif;
-    margin-left: 20px;
-    position: absolute;
-    margin-top: 127px;
     width: 100px;
     height: 30px;
     font-size: 16px;
-    text-align: center;
+    justify-content: center;
 }
 
 a:link {

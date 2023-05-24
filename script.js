@@ -3,7 +3,7 @@ const mainpic = document.querySelector('#main-pic');
 const images = [
     'images/SmartRx.png',
     'images/RPS.png',
-    'images/StrangerThings.jpg',
+    'images/StrangerThings.png',
     // Add more image URLs here
   ];
 

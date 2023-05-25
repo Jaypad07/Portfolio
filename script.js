@@ -46,6 +46,8 @@ const maxWidths = {
     'java-script': 42,
     java: 54,
     angular: 35,
+    git: 30,
+    sql: 25,
 };
 
 function handleScroll() { 

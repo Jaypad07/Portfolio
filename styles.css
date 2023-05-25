@@ -161,43 +161,44 @@ h1 {
     max-height: 65%;
     border-radius: 15px;
   }
+
+  #skills-title {
+    display: block;
+    color: #f0f0f0;
+    width: fit-content;
+    height: fit-content;
+    margin: 0 0 0 2%;
+    
+  }
   
 
 #skills-graphs {
     font-family: 'Poppins', 'Merriweather', serif;
-    font-size: 14px;
     grid-area: skills-graphs;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* background-color: #0b0c10;
-    margin-top: 4%; */
-
     background-color: #0b0c10;
     max-width: 100%;
     color: #0b0c10;
     height: 850px;
-    margin-top: 7%;
-    margin-bottom: 7%;
     margin-right: 20%;
     border-radius: 15px;
-
 }
 
 #graph-container {
-    font-family: 'Poppins', 'Merriweather', serif;
     grid-area: 1 / 1;
+    width: 861.2px;  /* fixxx? */
+    height: 850px;
     border-right: 1px solid #66fcf1;
 }
 
 #graph {
     display: grid;
-    
-    grid-template-rows: repeat(6, 20%);
+    grid-template-rows: repeat(7, 14.2%);
     grid-template-columns: repeat(4, 1fr);
-    width: 90%;
+    width: 100%;
     height: 90%;
-    margin-top: 5%;
-    grid-auto-flow: column;
+    padding-top: 10%;
 }
 
 .bar {
@@ -205,64 +206,73 @@ h1 {
     background-color: white;
     max-height: 100%;
     max-width: 100%;
-    height: 50px;
+    height: 40px;
     align-content: center;
-    font-size: 15px;
+    font-size: 18.5px;
     padding-left: 2%;
-    transition: width 0.1 ease; /* remove width? */
+    transition: width 0.1 ease;
     border: 4px groove black;
     border-left: none;
 }
 
 #html {
-    grid-area: 1 / span 4;
-}
+    grid-area: 1 / 1 / auto / span 4;}
 
 #css {
-    grid-area: 2 / span 4;
-}
+    grid-area: 2 / 1 / auto / span 4;}
 
 #java-script {
-    grid-area: 3 / span 4;
+    grid-area: 3 / 1 / auto / span 4;
 }
 
 #java {
-    grid-area: 4 / span 4;
+    grid-area: 4 / 1 / auto / span 4;
 }
 
 #angular {
-    grid-area: 5 / span 4;
+    grid-area: 5 / 1 / auto / span 4;
 }
+
+#git {
+    grid-area: 6 / 1 / auto / span 4;
+}
+
+#sql {
+    grid-area: 7 / 1 / auto / span 4;
+}
+
 
 .levels {
     display: flex;
     color: white;
     font-size: 25px;
     width: 100%;
-    justify-content: center;
-    
+    justify-content: space-evenly; 
 }
 
 #beginner {
-    grid-area: 6 / 1;
+    grid-area: 7 / 1;
+    align-self: end;
     justify-content: end;
+    
 }
 
 #intermediate {
-    grid-area: 6 / 2;
+    grid-area: 7 / 2;
+    align-self: end;
     justify-content: end;
 }
 
 #advanced {
-    grid-area: 6 / 3;  
+    grid-area: 7 / 3;  
+    align-self: end;
     justify-content: end;  
 }
 
 #expert {
-    display: flex;
-    grid-area: 6 / 4;
+    grid-area: 7 / 4;
     justify-content: center;
-    padding-left: 15%;
+    align-self: end;
 }
 
 #projects-container {

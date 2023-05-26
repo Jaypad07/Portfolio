@@ -41,13 +41,13 @@ hiddenBackground.forEach((el) => observer.observe(el));
 
 const bars = document.querySelectorAll('.bar');
 const maxWidths = {
-    html: 57,    
-    css: 52,
-    'java-script': 42,
-    java: 54,
+    java: 49,
+    spring: 34,
+    sql: 37,
     angular: 35,
-    git: 30,
-    sql: 25,
+    'java-script': 42,
+    'html-css': 47,   
+    git: 37,
 };
 
 function handleScroll() { 

@@ -42,8 +42,8 @@ hiddenBackground.forEach((el) => observer.observe(el));
 const bars = document.querySelectorAll('.bar');
 const maxWidths = {
     java: 49,
-    spring: 34,
-    sql: 37,
+    spring: 37,
+    sql: 34,
     angular: 35,
     'java-script': 42,
     'html-css': 47,   

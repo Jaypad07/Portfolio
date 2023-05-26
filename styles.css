@@ -43,13 +43,16 @@ body {
     position: absolute;
     margin-left: 3%;
     color: white;
-    font-size: 2.3rem;
-    top: 27rem;                                 
+    font-size: 67px;
+    top: 27rem;  
+    font-weight: 400;                               
  }
 
- #position {
-    font-size: 1.7rem;
-    font-family: 'futura', sans-serif;    
+ #job-position {
+    font-size: 2rem;
+    font-family: 'futura', sans-serif;
+    font-weight: 400;                               
+        
  }
 
 #header-links-container {

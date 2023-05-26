@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'futura';
+    src: url('Fonts/Futura LT W01 Light Oblique.ttf');
+}
 html {
     scroll-behavior: smooth;
 }
@@ -20,38 +24,46 @@ body {
     font-family: 'Poppins', 'Merriweather', serif;
     font-size: 17px;
     background-color: #0b0c10;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-area: header;
     color: white;
     border-bottom: 1px solid #66fcf1;
 }
 
-#header-names {
+/* #header-names {
     display: flex;
     grid-area: 1 / 1;
     justify-content: start;
     align-items: center;    
-}
+} */
 
-h3{
+#name {
+    position: absolute;
     margin-left: 3%;
+    color: white;
+    font-size: 2.3rem;
+    top: 27rem;                                 
+ }
+
+ #position {
+    font-size: 1.7rem;
+    font-family: 'futura', sans-serif;    
  }
 
 #header-links-container {
     display: grid;
     grid-area: 1 / 2;
-    margin-right: 4em;
-
+    font-size: 1.4rem ;
 }
 
 #header-right {
-    letter-spacing: 1px;
-    margin-top: 33px;
+    letter-spacing: 7px;
     display: flex;
-    flex-direction: row;
-    justify-content: end;
+    justify-content: center;
     list-style-type: none;
+    /* box-shadow: 8px -15px 17px -12px #66fcf1; */
 }
 
 .links {

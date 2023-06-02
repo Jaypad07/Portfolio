@@ -45,13 +45,15 @@ body {
     color: white;
     font-size: 67px;
     top: 27rem;  
-    font-weight: 400;                               
+    font-weight: 400;  
+    text-shadow: -8px 5px 5px black;                             
  }
 
  #job-position {
     font-size: 2rem;
     font-family: 'futura', sans-serif;
-    font-weight: 400;                               
+    font-weight: 400;    
+    text-shadow: -5px 5px 5px black;                           
         
  }
 
@@ -141,6 +143,7 @@ body {
     margin-bottom: 7%;
     margin-left: 20%;
     border-radius: 15px;
+    /* box-shadow: -2px 2px 5px 0px gray; */
 }
 
 h1 {
@@ -351,6 +354,8 @@ h1 {
     border: 1px solid gray;
     width: 35%;
     height: 35%; 
+    box-shadow: 0px 5px 30px white;
+    border-radius: 5px;
 }
 
 #pro1 {

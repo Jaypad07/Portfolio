@@ -4,6 +4,8 @@
 }
 
 * {box-sizing:border-box}
+
+
 html {
     scroll-behavior: smooth;
 }
@@ -14,13 +16,16 @@ body {
     background-color: black;
     display: grid;
     grid-template: "header"         80px
-                   "main-display"   2.5fr
-                   "about-me"       auto
-                   "skills-graphs"  auto
+                   "main-display"   1fr
+                   "pic-buttons"    min-content
+                   "about-me"       min-content
+                   "skills-graphs"  min-content
                    "footer"         300px
                                     / 1fr;
     margin: auto;
 }
+
+
 
 #header {
     font-family: 'Poppins', 'Merriweather', serif;
@@ -69,64 +74,52 @@ body {
     margin-left: 5%;
 }
 
-
-
 #main-display {
-    /* display: grid; */
-    /* grid-template-columns: 1fr; */
     grid-area: main-display;
     height: 775px;
-
-
-    max-width: 100%;
     position: relative;
-    /* margin: auto; */
-    
 }
+
 
 .pic-container {
-     /* grid-area: 1 / 1;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     height: 775px; */
-     width: 100%;
-     display: none;
-     
-
+    width: 100%;
+    height: 775px;
+    display: none;
+    margin: 0 auto;
 }
 
-/* #main-pic{
-    max-width: 80%; 
-    max-height: 100%; 
-    width: auto;
-    height: 600px;
-    margin-bottom: 5%;
-    border: 2px solid #cbd4e2;
-} */
-
 #vid { 
-    height: 775px;
     object-fit: cover;
   }
 
+  .slide {
+    height: 775px;
+    max-height: 75%;
+    margin-top: 5%;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+    border: 2px solid gray;
+  }
 
+  /* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0.7% 3.5px 0 0;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #66fcf1;
+  }
 
-
-
-#project-tabs {
-    font-family: 'Poppins', 'Merriweather', serif;
-    font-size: 14px;
-    font-weight: bold;
-    position: absolute;
-    display: flex;
-    background-color: #121212; 
-    height: 8%;
-    width: 28%;
-    align-self: end;
-    justify-self: end;
-    border-top-left-radius: 10px;
-    color: white;
+  /* Circle buttons for main display */
+  #pic-buttons {
+    grid-area: pic-buttons;
 }
 
 .tab {
@@ -146,7 +139,6 @@ body {
     background-color: #0b0c10;
     max-width: 100%;
     color: white;
-    /* height: 700px; */
     margin-top: 7%;
     margin-bottom: 7%;
     margin-left: 20%;
@@ -227,7 +219,7 @@ h1 {
     grid-template-rows: repeat(7, 14.2%);
     grid-template-columns: repeat(4, 1fr);
     width: 100%;
-    height: 90%;
+    height: 100%;
     padding-top: 10%;
 }
 
@@ -236,7 +228,7 @@ h1 {
     background-color: white;
     max-height: 100%;
     max-width: 100%;
-    height: 40px;
+    height: 45px;
     align-content: center;
     font-size: 18.5px;
     padding-left: 2%;
@@ -369,70 +361,87 @@ h1 {
     border-radius: 5px;
 }
 
-#pro1 {
-    grid-area: 1 / 1;
+#smartRx-img {
+    grid-area: 1 / 2;
     width: fit-content;
     height: fit-content;
     margin-top: 20%;
 }
 
 
-#sum1 {
+#smartRx-sum {
     display: grid;
-    grid-area: 1 / 1;
+    grid-area: 1 / 2;
     align-self: end;
     width: fit-content;
     height: fit-content;
-    padding: 0 10% 3% 10%;
+    padding: 0 10% 7% 10%;
     border-bottom: 1px solid #66fcf1;
     text-align: justify;
     word-wrap: break-word;
 }
 
-#pro2 {
-    grid-area: 1 / 2;
+#rps-img {
+    grid-area: 1 / 3;
     width: fit-content;
     height: fit-content;
     margin-top: 20%;
 }
 
-#sum2 {
+#rps-sum {
     display: grid;
-    grid-area: 1 / 2;
+    grid-area: 1 / 3;
     align-self: end;
     width: fit-content;
     height: fit-content;
-    padding: 0 10% 7% 15%;
+    padding: 0 5% 10% 7%;
     border-bottom: 1px solid #66fcf1;
     text-align: justify;
 }
 
-#pro3 {
-    grid-area: 1 / 3;
-    width: fit-content;
-    height: fit-content;
-    margin-top: 20%;
-}
-
-#sum3 {
-    display: grid;
-    grid-area: 1 / 3;
-    align-self: end;
-    padding: 0 10% 7.5% 12%;
-    border-bottom: 1px solid #66fcf1;
-    /* text-align: justify; */
-}
-
-#pro4 {
+#tictac-img {
     grid-area: 2 / 1;
     width: fit-content;
     height: fit-content;
     margin-top: 15%;
 }
 
-#sum4 {
+#tictac-sum {
     display: grid;
     grid-area: 2 / 1;
+    align-self: end;
+    padding: 0 10% 8% 12%;
+    /* text-align: justify; */
+}
+
+#wayfarer-img {
+    grid-area: 1 / 1;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 20%;
+}
+
+#wayfarer-sum {
+    display: grid;
+    grid-area: 1 / 1;
+    align-self: end;
+    padding: 0 5% 3% 7%;
+    text-align: justify;
+    word-wrap: break-word;
+    border-bottom: 1px solid #66fcf1;
+
+}
+
+#soon-img {
+    grid-area: 2 / 2;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 15%;
+}
+
+#soon-sum {
+    display: grid;
+    grid-area: 2 / 2;
     align-self: end;
     padding: 0 10% 6% 12%;
     text-align: justify;
@@ -464,17 +473,17 @@ h1 {
     margin-left: 0;
 }
 
-.form {
+#form {
     grid-area: auto / 1;
     width:fit-content;
     margin-left: 5%;
 }
 
-input[type=text] {
+input[type=text], input[type=email] {
     font-family: 'Poppins', 'Merriweather', serif;
     display: flex;
-    width: 320px;
-    height: 27px;
+    width: 352px;
+    height: 32px;
     margin-bottom: 3.5%;
     border-radius: 5px;
 }
@@ -502,7 +511,7 @@ button {
     margin-top: 33px;
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: flex-end;
     list-style-type: none;
 }
 
@@ -553,7 +562,7 @@ button {
     border-bottom: 1px groove #66fcf1;
     background-color: black;
     border-radius: 100%;
-    box-shadow: #66fcf1 0 0 40px 13px;
+    box-shadow: 0 0 40px 13px #66fcf1;
 }
 
 .resume-text {

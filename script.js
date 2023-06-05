@@ -1,44 +1,3 @@
-const mainpic = document.querySelector('#main-pic');
-
-const images = [
-    'images/SmartRx.png',
-    'images/RPS.png',
-    'images/StrangerThings.png',
-    // Add more image URLs here
-  ];
-
-  const img = document.getElementById("main-pic");
-  let currentIndex = 0;
-  
-  function switchToNextImage() {
-      currentIndex++;
-  
-      if (currentIndex >= images.length) {
-          currentIndex = 0;
-      }
-      
-      img.src = images[currentIndex];
-  }
-  
-  // Set the interval to switch images every 7 seconds
-  setInterval(switchToNextImage, 10000);
-  
-
-const observer = new IntersectionObserver ((entries) => {
-    entries.forEach((entry) => {
-        console.log(entry)
-        if(entry.isIntersecting) {
-            entry.target.classList.add('show');
-           
-        }else  entry.target.classList.remove('show');
-    });
-});
-
-
-const hiddenBackground = document.querySelectorAll('.hidden');
-hiddenBackground.forEach((el) => observer.observe(el));
-
-
 const bars = document.querySelectorAll('.bar');
 const maxWidths = {
     java: 49,
@@ -53,7 +12,6 @@ const maxWidths = {
 function handleScroll() { 
     const scrollPosition = window.scrollY;
     const windowHeight = window.innerHeight;
-    const scrollableHeight = document.documentElement.scrollHeight - windowHeight;
 
     bars.forEach((bar) => {
         const barId = bar.id;
@@ -73,24 +31,44 @@ window.addEventListener('scroll', handleScroll);
 
 
 let slideIndex = 1;
+let timer;
+
 showSlides(slideIndex);
+startTimer();
 
 // Next/previous controls
 function plusSlides(n) {
+  clearInterval(timer);
   showSlides(slideIndex += n);
+  startTimer();
 }
 
 // Thumbnail image controls
 function currentSlide(n) {
+  clearInterval(timer);
   showSlides(slideIndex = n);
+  startTimer();
 }
+
+function startTimer() {
+  timer = setInterval(function() {
+    plusSlides(1);
+  }, 12000); // Change slide every 7 seconds
+}
+
 
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("pic-container");
   let dots = document.getElementsByClassName("dot");
+  let name = document.getElementById("name");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
+  if (n == 1 || n == slides.length + 1) {
+    name.style.display = "block";
+  } else {
+    name.style.display = "none";
+  }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
@@ -100,6 +78,8 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+
 
 
 

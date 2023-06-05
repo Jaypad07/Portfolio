@@ -14,7 +14,29 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Heebo&family=Poppins:ital,wght@0,700;1,200&display=swap" rel="stylesheet">
-                
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init('fQ0JFS0wCvcPgVCwz');
+    })();
+</script>
+<script type="text/javascript">
+    window.onload = function() {
+        document.getElementById('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // generate a five digit number for the contact_number variable
+            this.contact_number.value = Math.random() * 100000 | 0;
+            // these IDs from the previous steps
+            emailjs.sendForm('contact_service', 'contact_form', this)
+                .then(function() {
+                    console.log('SUCCESS!');
+                }, function(error) {
+                    console.log('FAILED...', error);
+                });
+        });
+    }
+</script>              
 </head>
 <body>
     <header id="header">
@@ -32,30 +54,33 @@
     <div id="main-display">        
         <h3 id="name">Jaime Padilla &nbsp;&nbsp;|&nbsp;&nbsp;<span id="job-position">Full Stack Software Engineer</span></h3> 
         
-        <!-- <div class="pic-container fade"> -->
-            <video autoplay muted loop id="vid" class="pic-container fade" >
+            <video class="pic-container fade" autoplay muted loop id="vid"  >
                 <source src="images/earthvid.mp4" type="video/mp4">
             </video>
-        <!-- </div> -->
 
         <div class="pic-container fade">
-            <img src="images/SmartRx.png" style="width:100%">
+            <img class="slide" src="images/Wayfarer Original.png">
+            <!-- <div class="text">Caption Text</div> -->
+            </div>
+
+        <div class="pic-container fade">
+            <img class="slide" src="images/SmartRx.png">
             <!-- <div class="text">Caption Text</div> -->
           </div>
 
-            <!-- Next and previous buttons -->
-  <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+          <div class="pic-container fade">
+            <img class="slide" src="images/RPS.png">
+            <!-- <div class="text">Caption Text</div> -->
+          </div>
     </div>
-          
 
-        <div id="project-tabs">
-            <div id="t1" class="tab">Tic-Tac-Toe</div>
-            <div id="t2" class="tab">Rock Paper Scissors</div>
-            <div id="t3" class="tab">Smart Rx</div>
-            <div id="t4" class="tab">Project 4</div>
-        </div>
-    <!-- </div> -->
+    <div id = "pic-buttons" style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+
 
 <section id = "about-section">
     <div id="about-me">
@@ -68,10 +93,10 @@
             Beyond my professional pursuits, I find joy in various hobbies such as dancing, spending time with friends, and immersing myself in video games and books. What sets me apart is my unwavering commitment to personal and professional growth, paired with my strong work ethic. I thrive on challenges and embrace them with determination, always striving to contribute to the success of a team. With my dedication and ability to collaborate effectively, I aim to make a positive impact in any endeavor.
         </div>
     
-    <div id="headshot">
-        <img id="hs-img" src="images/headshot.jpg" alt="Jay's profile pic"/>
+        <div id="headshot">
+            <img id="hs-img" src="images/headshot.jpg" alt="Jay's profile pic"/>
+        </div>
     </div>
-</div>
 </section>
 
     
@@ -119,38 +144,50 @@
     <div id="projects-container">
         <h1 id="pro-header">Projects</h1>
 
-        <div id="pro1" class="project">
+        <div id="smartRx-img" class="project">
             <img class="pro-imgs" src="images/SmartRx.png" alt="SmartRx Logo"/>
         </div>
-        <div id="sum1" class="project-summary">
+        <div id="smartRx-sum" class="project-summary">
             The pharmacy management system API, built with the Spring Boot framework, offers a range of functionality for efficient management of pharmacy-related operations. 
             With this API, pharmacies can easily integrate and streamline their operations, enabling tasks such as adding and updating medication details, retrieving medication 
-            information, tracking prescriptions, update patient information, and processing prescription requests. The API's robust architecture ensures secure and reliable data handling.
+            information, tracking prescriptions, update patient information, and processing prescription requests.
         </div>
-        <div id="pro2" class="project">
+        <div id="rps-img" class="project">
             <img class="pro-imgs" src="images/RPS.png" alt="picture of a Human and machine playing Rock, Paper, Scissors"/>
         </div>
-        <div id="sum2" class="project-summary">
+        <div id="rps-sum" class="project-summary">
             A Rock, Paper, Scissors game developed in Java, playable in the console. Featuring both Player vs. Player and Player vs. Computer modes. 
             Challenge your friends or face off against an AI villain as you choose your moves while keeping track of your win/loss records. Planned using GitHub projects, this project 
             allowed me to sharpen my Java skills and deliver a fun gaming experience.
         </div>
-        <div id="pro3" class="project">
+        <div id="tictac-img" class="project">
             <img class="pro-imgs" src="images/StrangerThings.png" alt="picture of a TicTacToe game"/>
         </div>
-        <div id="sum3" class="project-summary">
+        <div id="tictac-sum" class="project-summary">
             As a beginner project in HTML, CSS, and JavaScript, I took on the challenge of creating a fun two player game from scratch. 
             I created a 3x3 grid with a Stranger Things backdrop. The game incorporates essential web development concepts like Grid CSS and Flexbox for effective element organization. 
             With player turns indicated through a custom-designed walkie-talkie interface, you can immerse yourself in the world of Stranger Things.
         </div>
-        <div id="pro4" class="project">
+
+        <div id="wayfarer-img" class="project">
+            <img class="pro-imgs" src="images/Wayfarer.png" alt="picture of a coming soon"/>
+        </div>
+        <div id="wayfarer-sum" class="project-summary">
+            Wayfarer is a remarkable travel app that allows you to discover awe-inspiring destinations while connecting with fellow globetrotters. Consider it a dedicated social media 
+            platform crafted exclusively for travel enthusiasts. Immerse yourself in captivating city posts, absorbing valuable insights and personal experiences shared by other travelers. 
+            With Wayfarer as your ultimate travel companion, you'll find endless inspiration to plan your own unforgettable adventures. It's the perfect app for passionate travelers.
+        </div>
+        
+        <div id="soon-img" class="project">
             <img class="pro-imgs" src="images/soon.jpg" alt="picture of a coming soon"/>
         </div>
-        <div id="sum4" class="project-summary">
+
+        <div id="soon-sum" class="project-summary">
             Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
             Eos erant dolorum an. Per facer affert ut. Mei iisque mentitum moderatius cu. Sit munere facilis accusam eu dicat falli consulatu at vis. Te facilisis mne omnium 
             in eos. Ei mea falli legere efficiantur et tollit aliquip debitis mei. No deserunt mediocritatem mel. Lorem ipsum dolor
         </div>
+
     </div>
 </section>
 
@@ -160,26 +197,26 @@
 <section id="contact-section">
     <footer id="footer">
         <h2 class="footer-titles">CONTACT ME</h2>
-        <form class="form" action="contactform.php" method="post">
+        <form id="form">
+            <input type="hidden" name="contact_number">
             <input type="text" name="name" placeholder="Full name">
-            <input type="text" name="email" placeholder="Email">
+            <input type="email" name="email" placeholder="Your Email">
             <input type="text" name="subject" placeholder="Subject">
             <textarea name="message" placeholder="Message"></textarea>
-            <button type="submit" name="submit">Send</button>
+            <button type="submit" value="Send">Send</button>
         </form>
 
-    <h2 class="footer-titles follow">FOLLOW ME</h2>
-    <div class="logo-container">
-        <a class="logo-link" href="https://github.com/Jaypad07" target="_blank">
-        <img class="social-media github" src="images/github.png" alt="picture of the GitHub logo"/>
-        </a>
-        <a class="logo-link" href="https://www.linkedin.com/in/jaypad07/" target="_blank">
-        <img class="social-media linkedin" src="images/link.png" alt="picture of the Linkedin logo"/>
-        </a>
+        <h2 class="footer-titles follow">FOLLOW ME</h2>
+        <div class="logo-container">
+            <a class="logo-link" href="https://github.com/Jaypad07" target="_blank">
+                <img class="social-media github" src="images/github.png" alt="picture of the GitHub logo"/>
+            </a>
+            <a class="logo-link" href="https://www.linkedin.com/in/jaypad07/" target="_blank">
+                <img class="social-media linkedin" src="images/link.png" alt="picture of the Linkedin logo"/>
+            </a>
         </div>
-    </div>
-        <div id = resume-container>
-        <a class = "resume-text" href="https://drive.google.com/file/d/1ynmFz0eU-fPVvGJevA7iNNodayAhAdqJ/view?usp=sharing" target="_blank">Resume</a>
+        <div id="resume-container">
+            <a class="resume-text" href="https://drive.google.com/file/d/1ynmFz0eU-fPVvGJevA7iNNodayAhAdqJ/view?usp=sharing" target="_blank">Resume</a>
         </div>
     </footer>
 </section>

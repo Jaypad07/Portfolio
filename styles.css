@@ -32,13 +32,6 @@ body {
     border-bottom: 1px solid #66fcf1;
 }
 
-/* #header-names {
-    display: flex;
-    grid-area: 1 / 1;
-    justify-content: start;
-    align-items: center;    
-} */
-
 #name {
     position: absolute;
     margin-left: 3%;
@@ -68,7 +61,6 @@ body {
     display: flex;
     justify-content: center;
     list-style-type: none;
-    /* box-shadow: 8px -15px 17px -12px #66fcf1; */
 }
 
 .links {
@@ -91,8 +83,8 @@ body {
 }
 
 #main-pic{
-    max-width: 80%; /* make sure the image doesn't exceed its container */
-    max-height: 100%; /* make sure the image doesn't exceed its container */
+    max-width: 80%; /* this will make sure the image doesn't exceed its container */
+    max-height: 100%; /* this will make sure the image doesn't exceed its container */
     width: auto;
     height: 600px;
     margin-bottom: 5%;
@@ -138,7 +130,7 @@ body {
     background-color: #0b0c10;
     max-width: 100%;
     color: white;
-    height: 700px;
+    /* height: 700px; */
     margin-top: 7%;
     margin-bottom: 7%;
     margin-left: 20%;
@@ -147,24 +139,27 @@ body {
 }
 
 h1 {
+    width: fit-content;
+    height: fit-content;
     font-family: 'Poppins', 'Merriweather', serif;
     grid-area: 1 / 1;
-    margin: 0px;
     margin-left: 5%;
-    margin-top: 6%;
+    margin-top: 2%;
     font-size: 3rem;
 }
 
 #bio {
     grid-area: 1 / 1;
     font-size: 18px;
-    line-height:30px;
-    margin-top: 10%;
+    line-height: 21px;
+    margin-top: 8%;
     margin-left: 5%;
     align-self: center;
     width: 80%;
     height: auto;
+   
 }
+
 
 #headshot {
     grid-area: 1 / 2;
@@ -409,7 +404,7 @@ h1 {
     align-self: end;
     padding: 0 10% 7.5% 12%;
     border-bottom: 1px solid #66fcf1;
-    text-align: justify;
+    /* text-align: justify; */
 }
 
 #pro4 {
@@ -589,6 +584,22 @@ button {
     filter: blur(0);
     transform: translateX(0);
 }
+
+@media (max-width: 2068px) {
+    #bio {
+      line-height: 27px;
+    }
+  }
+  
+  @media (max-width: 1780px) {
+    #bio {
+      line-height: 21px;
+    }
+
+    /* body {
+        background-color: rebeccapurple;
+    } */
+  }
 
 
 

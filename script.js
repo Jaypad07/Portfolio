@@ -1,3 +1,4 @@
+// This controls the skills / bars
 const bars = document.querySelectorAll('.bar');
 const maxWidths = {
     java: 49,
@@ -30,6 +31,8 @@ function handleScroll() {
 window.addEventListener('scroll', handleScroll);
 
 
+
+// This handles Main Display Carousel and adds 12sec automatic timer
 let slideIndex = 1;
 let timer;
 
@@ -53,7 +56,7 @@ function currentSlide(n) {
 function startTimer() {
   timer = setInterval(function() {
     plusSlides(1);
-  }, 12000); // Change slide every 7 seconds
+  }, 12000); // Change slide every 12 seconds
 }
 
 
@@ -78,6 +81,30 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+// Make imgs clickable without modifying their appearance
+var smartRxImg = document.getElementById('smartRx-img');
+var rpsImg = document.getElementById('rps-img');
+var tictacImg = document.getElementById('tictac-img');
+var wayfarerImg = document.getElementById('wayfarer-img');
+
+smartRxImg.addEventListener('click', function() {
+  window.open('https://github.com/Jaypad07/SmartRx', '_blank');
+});
+
+rpsImg.addEventListener('click', function() {
+  window.open('https://github.com/Jaypad07/Rock-Paper-Scissors', '_blank');
+});
+
+tictacImg.addEventListener('click', function() {
+  window.open('https://github.com/Jaypad07/Strange-Tic-Tac-Toe', '_blank');
+});
+
+wayfarerImg.addEventListener('click', function() {
+  window.open('https://github.com/Jaypad07/Wayfarer', '_blank');
+});
+
+
 
 
 

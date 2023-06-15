@@ -94,7 +94,7 @@ smartRxImg.addEventListener('click', function() {
 });
 
 rpsImg.addEventListener('click', function() {
-  window.open('https://github.com/Jaypad07/Find-Go-SpringBootAPI', '_blank');
+  window.open('https://github.com/Jaypad07/Rock-Paper-Scissors', '_blank');
 });
 
 tictacImg.addEventListener('click', function() {

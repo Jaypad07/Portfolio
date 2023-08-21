@@ -23,7 +23,6 @@ body {
                    "footer"         300px
                                     / 1fr;
     margin: auto;
-    min-height: 100vh;
 }
 
 
@@ -473,7 +472,6 @@ h1 {
     background-color: #0b0c10;
     margin-top: 10%;
     height: 440px;
-    position: sticky;
 }
 
 .footer-titles {

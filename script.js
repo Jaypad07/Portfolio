@@ -88,6 +88,7 @@ var rpsImg = document.getElementById('rps-img');
 var tictacImg = document.getElementById('tictac-img');
 var wayfarerImg = document.getElementById('wayfarer-img');
 var findGoImg = document.getElementById('find-go-img');
+var unityImg = document.getElementById('unity-img');
 
 smartRxImg.addEventListener('click', function() {
   window.open('https://github.com/Jaypad07/SmartRx', '_blank');
@@ -108,6 +109,11 @@ wayfarerImg.addEventListener('click', function() {
 findGoImg.addEventListener('click', function() {
   window.open('https://github.com/Jaypad07/Find-Go-SpringBootAPI', '_blank');
 });
+
+unityImg.addEventListener('click', function() {
+  window.open('https://learn.unity.com/u/63f2d6d2edbc2a26d5c00e00?tab=profile', '_blank');
+});
+
 
 
 

@@ -143,7 +143,7 @@ body {
     margin-bottom: 7%;
     margin-left: 20%;
     border-radius: 15px;
-    /* box-shadow: -2px 2px 5px 0px gray; */
+    box-shadow: -2px 2px 5px 0px gray;
 }
 
 h1 {
@@ -158,12 +158,13 @@ h1 {
 
 #bio {
     grid-area: 1 / 1;
-    font-size: 18px;
+    font-size: 19px;
     line-height: 21px;
     margin-left: 5%;
     align-self: center;
     width: 80%;
-    height: auto;
+    height: 20%;
+    margin-bottom: 12%;
 }
 
 
@@ -430,19 +431,21 @@ h1 {
 
 }
 
-#soon-img {
+#unity-img {
     grid-area: 2 / 3;
     width: fit-content;
     height: fit-content;
     margin-top: 15%;
+
 }
 
-#soon-sum {
+#unity-sum {
     display: grid;
     grid-area: 2 / 3;
     align-self: end;
     padding: 0 10% 6% 12%;
     text-align: justify;
+    margin-bottom: 15%;
 }
 
 #find-go-img {

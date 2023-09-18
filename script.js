@@ -53,11 +53,11 @@ function currentSlide(n) {
   startTimer();
 }
 
-function startTimer() {
-  timer = setInterval(function() {
-    plusSlides(1);
-  }, 12000); // Change slide every 12 seconds
-}
+// function startTimer() {
+//   timer = setInterval(function() {
+//     plusSlides(1);
+//   }, 12000); // Change slide every 12 seconds
+// }
 
 
 function showSlides(n) {

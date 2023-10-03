@@ -37,20 +37,20 @@ let slideIndex = 1;
 let timer;
 
 showSlides(slideIndex);
-startTimer();
+// startTimer();
 
 // Next/previous controls
 function plusSlides(n) {
   clearInterval(timer);
   showSlides(slideIndex += n);
-  startTimer();
+  // startTimer();
 }
 
 // Thumbnail image controls
 function currentSlide(n) {
   clearInterval(timer);
   showSlides(slideIndex = n);
-  startTimer();
+  // startTimer();
 }
 
 // function startTimer() {

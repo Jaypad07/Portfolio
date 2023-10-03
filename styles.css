@@ -381,20 +381,20 @@ h1 {
     word-wrap: break-word;
 }
 
-#rps-img {
+#bash-img {
     grid-area: 2 / 1;
     width: fit-content;
     height: fit-content;
     margin-top: 15%;
 }
 
-#rps-sum {
+#bash-sum {
     display: grid;
     grid-area: 2 / 1;
     align-self: end;
     width: fit-content;
     height: fit-content;
-    padding: 0 5% 10% 7%;
+    padding: 0 5% 15% 10%;
     text-align: justify;
 }
 

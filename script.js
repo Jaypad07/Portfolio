@@ -111,7 +111,7 @@ findGoImg.addEventListener('click', function() {
 });
 
 unityImg.addEventListener('click', function() {
-  window.open('https://learn.unity.com/u/63f2d6d2edbc2a26d5c00e00?tab=profile', '_blank');
+  window.open('https://jaypad07.itch.io', '_blank');
 });
 
 

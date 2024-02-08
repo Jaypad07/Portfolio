@@ -6,7 +6,7 @@ const maxWidths = {
     sql: 34,
     angular: 35,
     'java-script': 42,
-    'html-css': 47,   
+    csharp: 47,   
     git: 37,
 };
 
